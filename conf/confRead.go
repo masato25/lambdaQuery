@@ -9,11 +9,12 @@ import (
 type Conf struct {
 	FuncationName string
 	FileName      string
-	Params        map[string]string
+	Params        []string
+	Description 	string
 }
 
 func ReadConf() (conf *[]Conf){
-	dat, err := ioutil.ReadFile("./funjs.json")
+	dat, err := ioutil.ReadFile("./lambdaSetup.json")
 	if err != nil {
 		fmt.Println(err)
 	}

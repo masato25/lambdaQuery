@@ -1,0 +1,20 @@
+[
+  {
+    "funcation_name": "avgCompare",
+    "file_path": "./js/avgCompare.js",
+    "params": ["cond"],
+    "description": ""
+  },
+  {
+    "funcation_name": "top",
+    "file_path": "./js/top.js",
+    "params": ["limit"],
+    "description": ""
+  },
+  {
+    "funcation_name": "sumAll",
+    "file_path": "./js/sumAll.js",
+    "params": ["aliasName"],
+    "description": ""
+  }
+]
