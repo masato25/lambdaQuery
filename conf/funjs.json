@@ -1,0 +1,12 @@
+[
+  {
+    "funcation_name": "avg",
+    "file_path": "./js/avg.js",
+    "params": []
+  },
+  {
+    "funcation_name": "top",
+    "file_path": "./js/top.js",
+    "params": []
+  }
+]
