@@ -2,19 +2,25 @@
   {
     "funcation_name": "avgCompare",
     "file_path": "./js/avgCompare.js",
-    "params": ["cond"],
-    "description": ""
+    "params": ["cond:string"],
+    "description": "Get result that bigger or equal or small than the avg value of counter from all records"
   },
   {
     "funcation_name": "top",
     "file_path": "./js/top.js",
-    "params": ["limit"],
-    "description": ""
+    "params": ["limit:int", "orderby:string"],
+    "description": "get top n result based on avg values of counter"
   },
   {
     "funcation_name": "sumAll",
     "file_path": "./js/sumAll.js",
-    "params": ["aliasName"],
+    "params": ["aliasName:string"],
     "description": ""
+  },
+  {
+    "funcation_name": "limit",
+    "file_path": "./js/limit.js",
+    "params": ["limit:int"],
+    "description": "get first n records"
   }
 ]

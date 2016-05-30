@@ -1,4 +1,8 @@
+/*
+  get avg value of counter and retrun top n
+*/
 limit = (typeof limit == "undefined"? 3 : limit)
+orderby = (typeof orderby == "undefined"? "-" : orderby)
 t2 = _.map(input, function(res){
   res.Avg = _.reduce(res.Values, function(sum,v){
     return (sum+v.Value)
@@ -7,7 +11,11 @@ t2 = _.map(input, function(res){
 })
 
 t3 = _.chain(t2).sortBy(function(res){
-  return - res.Avg;
+  if(orderby == "-"){
+    return - res.Avg
+  }else{
+    return res.Avg
+  }
 }).first(limit).value();
 
 output = JSON.stringify(t3)
