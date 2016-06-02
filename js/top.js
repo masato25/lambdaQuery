@@ -2,7 +2,7 @@
   get avg value of counter and retrun top n
 */
 limit = (typeof limit == "undefined"? 3 : limit)
-orderby = (typeof orderby == "undefined"? "-" : orderby)
+orderby = (typeof orderby == "undefined"? "desc" : orderby)
 t2 = _.map(input, function(res){
   res.Avg = _.reduce(res.Values, function(sum,v){
     return (sum+v.Value)
@@ -11,7 +11,7 @@ t2 = _.map(input, function(res){
 })
 
 t3 = _.chain(t2).sortBy(function(res){
-  if(orderby == "-"){
+  if(orderby == "desc"){
     return - res.Avg
   }else{
     return res.Avg
