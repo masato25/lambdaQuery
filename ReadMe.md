@@ -1,6 +1,7 @@
 # LambdaQuery. 可擴充運算聚合框架.
 ![](./lambdaQuery.jpg)
 * 支援RRDTOOL data / open-falcon graph
+
 ### 如何擴充
 1. 定義自己的js聚合計算.
 2. 設定 `conf/lambdaSetup.json`
