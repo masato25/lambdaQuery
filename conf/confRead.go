@@ -6,6 +6,8 @@ import (
 	"log"
 	"reflect"
 	"sync"
+
+	"github.com/masato25/lambdaQuery/utils"
 )
 
 type Gconfig struct {
@@ -38,7 +40,6 @@ func functionMapGen() {
 	for _, v := range gconfig {
 		contain := jsFileReader(v.FilePath)
 		v.Codes = contain
-		log.Printf("%v", v.Params)
 		FunctionMap[v.FuncationName] = v
 	}
 }
@@ -72,9 +73,5 @@ func GetFunc(key string) *FunConfig {
 }
 
 func GetAvaibleFun() []string {
-	var keys []string
-	for _, v := range reflect.ValueOf(FunctionMap).MapKeys() {
-		keys = append(keys, v.String())
-	}
-	return keys
+	return utils.GetMapKeys(reflect.ValueOf(FunctionMap).MapKeys())
 }
