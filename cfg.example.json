@@ -1,0 +1,20 @@
+{
+    "http": {
+      "lisent": ":8888"
+    },
+    "graphdb": {
+        "addr": "root:mypassword@tcp(localhost:3306)/graph?charset=utf8&parseTime=True&loc=Local",
+        "idle": 10,
+        "max": 100
+    },
+    "graph": {
+        "connTimeout": 1000,
+        "callTimeout": 5000,
+        "maxConns": 32,
+        "maxIdle": 32,
+        "replicas": 500,
+        "cluster": {
+            "node-00": "localhost:6070"
+        }
+    }
+}
